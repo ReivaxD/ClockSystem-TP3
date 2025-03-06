@@ -1,4 +1,3 @@
-https://github.com/ReivaxD/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg
 ![gradle_build](https://github.com/ReivaxD/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
 
 # ClockSystem
