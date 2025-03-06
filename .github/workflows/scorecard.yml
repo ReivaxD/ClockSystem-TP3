@@ -36,10 +36,15 @@ jobs:
       with :
         path: app/build/reports/tests
 
+    - name: "Upload SARIF results to code scanning"
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: results.sarif
+
     - name: Start Xvfb
       run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
     - name: "Run analysis"
-      uses: ossf/scorecard-action@v2.2.2
+      uses: ossf/scorecard-action@v2
       with:
         results_file: results.sarif
         results_format: sarif
@@ -52,10 +57,6 @@ jobs:
         path: results.sarif
         retention-days: 5
 
-    - name: "Upload SARIF results to code scanning"
-      uses: github/codeql-action/upload-sarif@v3
-      with:
-        sarif_file: results.sarif
 
         
 
