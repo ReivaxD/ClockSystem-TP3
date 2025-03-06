@@ -36,11 +36,6 @@ jobs:
       with :
         path: app/build/reports/tests
 
-    - name: "Upload SARIF results to code scanning"
-      uses: github/codeql-action/upload-sarif@v3
-      with:
-        sarif_file: results.sarif
-
     - name: Start Xvfb
       run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
 
@@ -52,6 +47,10 @@ jobs:
         retention-days: 5
 
 
+    - name: "Upload SARIF results to code scanning"
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: results.sarif
         
 
 
