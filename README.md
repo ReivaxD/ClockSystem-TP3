@@ -4,6 +4,7 @@
 
 ![](https://github.com/ReivaxD/ClockSystem-TP3/actions/workflows/codeql.yml/badge.svg)
 
+![](https://github.com/ReivaxD/ClockSystem-TP3/actions/workflows/scorecard.yml/badge.svg)
 
 # ClockSystem
 
