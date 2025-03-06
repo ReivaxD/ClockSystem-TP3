@@ -23,3 +23,6 @@ jobs:
       - uses: pmd/pmd-github-action@v2
         with:
           rulesets: ’java-basic’
+      - name: Fail build if there are violations
+        if: steps.pmd.outputs.violations != 10
+        run: exit 1
