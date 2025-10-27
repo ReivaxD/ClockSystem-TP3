@@ -36,7 +36,7 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v5
       with :
         path: app/build/reports/tests
 
